@@ -93,6 +93,27 @@ body {
     letter-spacing: 0.02em;
 }
 
+.menu-item {
+    position: relative;
+}
+
+.first {
+    position: relative;
+    color: #404bbf;
+}
+
+.first::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #404bbf;
+    border-radius: 2px;
+    left: 0;
+    bottom: -1px;
+}
+
 .menu-link:hover,
 .menu-link:focus {
     color: #404bbf;
@@ -122,8 +143,14 @@ body {
 }
 
 /*///////////// Hero Section /////////////*/
+
 .hero-section {
-    background: #2e2f42;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)), url(../images/hero-section/people-office.jpg);
     padding: 188px 0;
 }
 
@@ -195,6 +222,30 @@ body {
     max-width: calc((100% - 72px) / 4);
 }
 
+.icon-container {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+}
+
+.our-benefits-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 64px;
+    height: 64px;
+    width: 100%;
+    height: 100%;
+}
+
 .our-benefits-feature {
     margin-bottom: 8px;
     font-weight: 500;
@@ -233,6 +284,7 @@ body {
 
 .team-info {
     padding: 32px 0;
+    text-align: center;
 }
 
 .team-names {
@@ -252,6 +304,11 @@ body {
     background: #fff;
 }
 
+.team-icon {
+    fill: #4d5ae5;
+    stroke: #fff;
+}
+
 /*///////////////////////// Portfolio Section /////////////////////////*/
 .portfolio-section {
     padding-top: 120px;
@@ -267,12 +324,18 @@ body {
 }
 
 .portfolio-item {
+    position: relative;
     width: calc((100% - 48px) / 3);
     display: block;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #e7e9fc;
     border-top: none;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
 }
 
 .portfolio-item img {
@@ -301,6 +364,26 @@ body {
     letter-spacing: 0.02em;
 }
 
+.portfolio-hidden-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f4f4fd;
+    background: rgba(77, 90, 229, 0.9);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: traansform 250ms linear;
+}
+
+.image-container:hover .portfolio-hidden-text {
+    transform: translateY(0);
+}
 /*///////////////////////////// Footer /////////////////////////////*/
 footer {
     background: #2e2f42;
@@ -310,6 +393,11 @@ footer {
 .main-footer {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
 }
 
 .footer-logo {
@@ -327,3 +415,12 @@ footer {
     max-width: 264px;
 }
 
+.social-media-text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.social-icon {
+    gap: 24px;
+}
