@@ -1,4 +1,4 @@
-/* Reset */
+
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0;
@@ -51,6 +51,7 @@ body {
 
 .site-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66 , 0.08);
 }
 
 .site-header-container {
@@ -100,6 +101,7 @@ body {
 .first {
     position: relative;
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first::after {
@@ -139,6 +141,7 @@ body {
 .address-link:focus {
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #404bbf;
 }
 
@@ -151,6 +154,9 @@ body {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7), 
         rgba(46, 47, 66, 0.7)), url(../images/hero-section/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0;
 }
 
@@ -167,7 +173,7 @@ body {
     text-align: center;
 }
 
-.hero-button {
+.main-button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -183,6 +189,7 @@ body {
     letter-spacing: 0.04em;
     color: #fff;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -222,30 +229,23 @@ body {
     max-width: calc((100% - 72px) / 4);
 }
 
-.icon-container {
-    width: 64px;
-    height: 64px;
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-}
-
-.our-benefits-icon {
+.container-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 64px;
-    height: 64px;
-    width: 100%;
-    height: 100%;
+    margin-bottom: 8px;
 }
 
+.our-benefits-icon {
+    margin-bottom: 20px;
+    width: 64px;
+    height: 64px;
+}
 .our-benefits-feature {
     margin-bottom: 8px;
     font-weight: 500;
@@ -275,6 +275,9 @@ body {
 }
 
 .our-team-list .our-team-member:first-child {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -288,6 +291,7 @@ body {
 }
 
 .team-names {
+    margin-top: 32px;
     margin-bottom: 8px;
     text-align: center;
     font-weight: 500;
@@ -304,12 +308,39 @@ body {
     background: #fff;
 }
 
-.team-icon {
-    fill: #4d5ae5;
-    stroke: #fff;
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-media-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-link {
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+    background-color: #404bbf;
+}
+
+.social-media-icon {
+    fill:  #f4f4fd;
 }
 
 /*///////////////////////// Portfolio Section /////////////////////////*/
+
+
 .portfolio-section {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -332,6 +363,14 @@ body {
     border: 1px solid #e7e9fc;
     border-top: none;
     overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px 
+    rgba(46, 47, 66, 0.16), 0px 2px 1px 
+    rgba( 46, 47, 66, 0.08);
+    transform: translateY(0%);
 }
 
 .image-container {
