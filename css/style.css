@@ -298,12 +298,12 @@ body {
 }
 
 .social-media-team-item {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 40px;
     height: 40px;
 }
 
 .social-media-team-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
@@ -479,12 +479,12 @@ footer {
 }
 
 .social-media-item-footer {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 40px;
     height: 40px;
 }
 
 .social-media-link-footer {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
